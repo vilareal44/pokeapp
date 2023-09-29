@@ -19,7 +19,7 @@ class _PokeApiClient implements PokeApiClient {
   String? baseUrl;
 
   @override
-  Future<List<Pokemon>> getPokemons({
+  Future<PokeApiResponse> getPokemons({
     int limit = 10,
     int offset = 0,
   }) async {
@@ -30,15 +30,15 @@ class _PokeApiClient implements PokeApiClient {
     };
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Pokemon>>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<PokeApiResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/pokemons',
+              '/pokemon',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -47,9 +47,7 @@ class _PokeApiClient implements PokeApiClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    var value = _result.data!
-        .map((dynamic i) => Pokemon.fromJson(i as Map<String, dynamic>))
-        .toList();
+    final value = PokeApiResponse.fromJson(_result.data!);
     return value;
   }
 

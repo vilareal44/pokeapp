@@ -13,8 +13,8 @@ abstract class PokeApiClient {
   factory PokeApiClient(Dio dio, {String baseUrl}) = _PokeApiClient;
 
   /// Get all pokemons with paging capability
-  @GET('/pokemons')
-  Future<List<Pokemon>> getPokemons({
+  @GET('/pokemon')
+  Future<PokeApiResponse> getPokemons({
     @Query('limit') int limit = 10,
     @Query('offset') int offset = 0,
   });

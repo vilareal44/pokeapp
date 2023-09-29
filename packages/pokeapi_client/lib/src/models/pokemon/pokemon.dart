@@ -8,7 +8,7 @@ part 'pokemon.g.dart';
 @JsonSerializable()
 class Pokemon {
   /// {@macro pokemon}
-  Pokemon({required this.name, required this.detailsUrl});
+  Pokemon({required this.name, required this.url});
 
   /// Factory constructor that parse json response from api
   factory Pokemon.fromJson(Map<String, dynamic> json) =>
@@ -18,5 +18,5 @@ class Pokemon {
   final String name;
 
   /// Pokemon detail url
-  final String detailsUrl;
+  final String url;
 }

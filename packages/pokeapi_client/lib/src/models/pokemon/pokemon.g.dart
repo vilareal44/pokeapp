@@ -8,10 +8,10 @@ part of 'pokemon.dart';
 
 Pokemon _$PokemonFromJson(Map<String, dynamic> json) => Pokemon(
       name: json['name'] as String,
-      detailsUrl: json['detailsUrl'] as String,
+      url: json['url'] as String,
     );
 
 Map<String, dynamic> _$PokemonToJson(Pokemon instance) => <String, dynamic>{
       'name': instance.name,
-      'detailsUrl': instance.detailsUrl,
+      'url': instance.url,
     };

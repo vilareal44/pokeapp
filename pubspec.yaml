@@ -10,6 +10,7 @@ dependencies:
   app_ui:
     path: ./packages/app_ui
   bloc: ^8.1.2
+  dio: ^5.3.3
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
