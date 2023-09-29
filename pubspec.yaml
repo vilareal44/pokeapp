@@ -19,6 +19,8 @@ dependencies:
   intl: ^0.18.0
   pokeapi_client:
     path: ./packages/pokeapi_client
+  pokemon_repository:
+    path: ./packages/pokemon_repository
 
 dev_dependencies:
   bloc_test: ^9.1.4
