@@ -14,12 +14,12 @@ Bootstraped with Very Good CLI
 
 ## Packages used
 
-- **go_router**: Rotas com Navigator 2.0
-- **Dio and Retrofit**: Simplificam o consumo de apis REST (generators)
-- **flutter_gen**: evitar uso de assets via 'String-based APIs'
-- **intl**: mesmo sendo 1 lingua, simplifica centralização de strings
-- **equatable**
-- **json_serializable / json_annotation**: generator que facilida criação de data classes
+- **go_router**: Routes with Navigator 2.0
+- **Dio and Retrofit**: Simplify use of REST apis (generators)
+- **flutter_gen**: Avoid use of assets via 'String-based APIs'
+- **intl**: Centralize strings and prepare for localization 
+- **json_serializable / json_annotation**: Build systen for handling JSON
+- **equatable**: Helps to implement value based equality
 
 ---
 
