@@ -40,7 +40,7 @@ class PokemonRepository {
   /// * [limit] - The number of results to return.
   /// * [offset] - The (zero-based) offset of the first item
   /// in the collection to return.
-  Future<PokeApiResponse> getArticle({
+  Future<PokeApiResponse> fetchPokemons({
     int? limit,
     int? offset,
   }) async {
